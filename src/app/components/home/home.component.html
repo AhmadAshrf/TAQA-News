@@ -1,0 +1,33 @@
+<!-- Start Loading Section-->
+<div *ngIf="isPageLoaded" class="d-flex justify-content-center pt-5">
+    <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+<!--End Loading Section-->
+<!--Start Binding Content-->
+<div class="content mt-5 mb-3">
+    <h4 class="section-name"><i class="fa-solid fa-square-rss"></i> أحدث الأخبار</h4>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col" *ngFor="let items of homeNews; let i = index">
+            <a class="btn" routerLink="/details/{{items.ID}}">
+                <div class="card">
+                    <div class="content text-center">
+                        <i class="fa-solid fa-tags"></i>
+                        <h4 class="d-inline">{{items.DepartmentName}}</h4>
+                    </div>
+                    <hr>
+                    <div class="img-body">
+                        <img [src]="items.ImagePath" class="img-fluid img-thumbnail" [alt]="items.DepartmentName">
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title">{{items.Title}}</h6>
+                        <hr>
+                        <p class="card-text text-center"><i class="fa-solid fa-clock"></i>{{items.ArabicDate}}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- End Binding Content -->

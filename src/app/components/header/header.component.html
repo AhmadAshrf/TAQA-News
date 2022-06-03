@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+      <span class="beta">Beta</span>
+        <a class="navbar-brand" routerLink="/home">
+            <span>TaQa</span>
+            <span>News</span>
+        </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav"> 
+          <a class="nav-link p-3" routerLink="/home" routerLinkActive="active">الرئيسية</a>
+
+        </div>
+        <div *ngFor="let items of menu" class="navbar-nav">
+          <a class="nav-link p-3" routerLink="/department/{{items.ID}}" routerLinkActive="active">{{items.Name}}</a>
+        </div>
+      </div>
+    </div>
+  </nav>

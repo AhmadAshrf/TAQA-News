@@ -1,0 +1,45 @@
+.card {
+    padding: 15px;
+    border: 3px solid rgb(123, 185, 31);
+}
+
+hr {
+    border-bottom: 4px solid rgb(123, 185, 31);
+    ;
+}
+
+h4.section-name {
+    border: 3px solid;
+    padding: 7px;
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 5px;
+    width: 70%;
+    margin: 25px auto;
+}
+
+h4.section-name svg {
+    color: rgb(123, 185, 31);
+    ;
+}
+
+h6{
+    height: 80px;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    align-content: center;
+}
+
+img{
+    height: 250px;
+}
+.img-body{
+    overflow: hidden;
+}
+
+img:hover{
+    transform: scale(1.2);
+    transition: transform 0.4s ease;
+}

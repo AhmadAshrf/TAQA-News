@@ -1,0 +1,16 @@
+<h5 class="sectionTitle"><i class="fa-solid fa-recycle"></i> أخبار قد تهمك</h5>
+<div class="card-group pb-2 mt-4" *ngFor="let items of moreNews; let i = index">
+  <a class="btn" routerLink="/details/{{items.ID}}">
+    <div class="card">
+      <div class="card-body">
+        <span class="badge rounded-pill">{{i+1}}</span>
+        <h5 class="d-inline card-title fs-6">{{' ' + items.Title}}</h5>
+      </div>
+      <div class="card-footer">
+        <i class="fa-solid fa-clock"></i>
+        <p class="d-inline text-center"><span>{{' ' + items.ArabicDate}}</span> </p>
+      </div>
+    </div>
+  </a>
+</div>
+

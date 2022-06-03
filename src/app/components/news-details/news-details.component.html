@@ -1,0 +1,18 @@
+<div *ngIf="isPageLoaded" class="d-flex justify-content-center pt-5">
+    <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+<div class="mt-5 card text-center">
+    <div class="card-header">
+      {{news?.Title}}
+    </div>
+    <div class="card-body">
+        <img [src]="news?.ImagePath" class="img-fluid">
+        <div class="m-5" innerHtml="{{news?.Desc}}">{{news?.Desc}}</div>
+    </div>
+    <div class="card-footer text-muted">
+      {{news?.ArabicDate}}
+    </div>
+    <a class="btn btn-primary" routerLink="/home">العودة الي الصفحة الرئيسية</a>
+  </div>

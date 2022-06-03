@@ -1,0 +1,19 @@
+<div class="d-none d-sm-block">
+  <h5 class="sectionTitle"><i class="fa-solid fa-arrow-trend-up"></i> الأكثر قراءة</h5>
+  <div class="card-group pb-2 mt-4" *ngFor="let items of topNews; let i = index">
+    <a class="btn" routerLink="/details/{{items.ID}}">
+    <div class="card">
+      <div class="card-body">
+        <span class="badge rounded-pill">{{i+1}}</span>
+        <h5 class="d-inline card-title fs-6">{{' ' + items.Title}}</h5>
+      </div>
+      <div class="card-footer">
+        <i class="fa-solid fa-clock"></i>
+        <p class="d-inline text-center">
+          {{items.ArabicDate}}
+        </p>
+      </div>
+    </div>
+    </a>
+  </div>
+</div>
